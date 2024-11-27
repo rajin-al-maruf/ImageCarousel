@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react'
+import Carousel from './components/Carousel';
 
 function App() {
+
+  const [randomImages, setRandomImages] = useState([
+    "https://picsum.photos/600/400?random=1",
+    "https://picsum.photos/600/400?random=2",
+    "https://picsum.photos/600/400?random=3",
+    "https://picsum.photos/600/400?random=4",
+    "https://picsum.photos/600/400?random=5",
+  ])
+
+
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Carousel randomImages={randomImages}/>
     </div>
   );
 }
